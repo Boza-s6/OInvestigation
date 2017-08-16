@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.oinvestigation.Broadcasts"
+    tools:showIn="@layout/activity_broadcasts">
+
+    <Button
+        android:id="@+id/explicit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explicit"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.255"/>
+
+    <Button
+        android:id="@+id/Implicit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Implicit"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/explicit"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <Button
+        android:id="@+id/fanout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fanout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/Implicit"/>
+
+    <Button
+        android:id="@+id/startBroadcastWithAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Start broadcast with alarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fanout"/>
+
+    <Button
+        android:id="@+id/startBroadcastWithHandler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Broadcast with Handler"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/startBroadcastWithAlarm"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        android:id="@+id/startBroadcastWithAlarmAllowIdle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="startBroadcastWithAlarmAllowIdle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/startBroadcastWithHandler"/>
+</android.support.constraint.ConstraintLayout>
